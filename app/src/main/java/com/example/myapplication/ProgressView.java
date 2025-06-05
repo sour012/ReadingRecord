@@ -75,7 +75,7 @@ public class ProgressView extends View {
         textPaint.setTextSize(42);
         canvas.drawText(String.format("%.0f%%", progress), centerX, rect.centerY(), textPaint);
 
-        // 绘制下方累计页数
+        // 绘制累计页数
         textPaint.setTextSize(36);
         float pageTextY = rect.bottom + dpToPx(40);
         canvas.drawText("累积页数：" + totalPages + "页", centerX, pageTextY, textPaint);

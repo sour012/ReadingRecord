@@ -29,6 +29,7 @@
         android:text="保存目标"
         android:textAllCaps="false"
         android:layout_marginBottom="8dp"/>
+
     <com.example.myapplication.ProgressView
         android:id="@+id/progressView"
         android:layout_width="250dp"

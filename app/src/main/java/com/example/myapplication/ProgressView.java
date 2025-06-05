@@ -60,7 +60,7 @@ public class ProgressView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        // 计算环形图区域（保留10%边距）
+        // 计算环形图区域
         float padding = getWidth() * 0.1f;
         float circleSize = getWidth() - 2 * padding;
         RectF rect = new RectF(padding, padding, padding + circleSize, padding + circleSize);

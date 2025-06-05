@@ -23,7 +23,6 @@ public class ProgressView extends View {
         super(context, attrs);
         init();
     }
-
     private void init() {
         // 进度条画笔设置
         progressPaint = new Paint();

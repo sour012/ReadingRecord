@@ -27,7 +27,7 @@ public class ProgressView extends View {
     private void init() {
         // 进度条画笔设置
         progressPaint = new Paint();
-        progressPaint.setColor(0xFF4CAF50); // 绿色进度条
+        progressPaint.setColor(0xFF4CAF50);
         progressPaint.setStrokeWidth(20);
         progressPaint.setStyle(Paint.Style.STROKE);
         progressPaint.setAntiAlias(true);
@@ -38,7 +38,6 @@ public class ProgressView extends View {
         textPaint.setTextSize(36);
         textPaint.setAntiAlias(true);
         textPaint.setTextAlign(Paint.Align.CENTER);
-
         setContentDescription("读书进度环形图");
     }
 

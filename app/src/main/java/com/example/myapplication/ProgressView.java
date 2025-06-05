@@ -11,7 +11,7 @@ import android.view.View;
 public class ProgressView extends View {
     private Paint progressPaint;  // 进度条画笔
     private Paint textPaint;     // 文字画笔
-    private float progress = 0;  // 当前进度值 (0-100)
+    private float progress = 0;  // 当前进度值
     private int totalPages = 0;  // 累计页数
 
     public ProgressView(Context context) {
@@ -71,11 +71,11 @@ public class ProgressView extends View {
         // 计算中心坐标
         float centerX = getWidth() / 2f;
 
-        // 绘制进度百分比（仅环形中心显示）
+        // 绘制进度百分比
         textPaint.setTextSize(42);
         canvas.drawText(String.format("%.0f%%", progress), centerX, rect.centerY(), textPaint);
 
-        // 绘制累计页数（环形下方）
+        // 绘制累计页数
         textPaint.setTextSize(36);
         float pageTextY = rect.bottom + dpToPx(40);
         canvas.drawText("累积页数：" + totalPages + "页", centerX, pageTextY, textPaint);

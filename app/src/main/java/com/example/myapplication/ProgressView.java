@@ -18,7 +18,6 @@ public class ProgressView extends View {
         super(context);
         init();
     }
-
     public ProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();

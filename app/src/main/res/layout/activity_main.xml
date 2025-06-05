@@ -29,12 +29,14 @@
         android:text="保存目标"
         android:textAllCaps="false"
         android:layout_marginBottom="8dp"/>
+
     <com.example.myapplication.ProgressView
         android:id="@+id/progressView"
         android:layout_width="250dp"
         android:layout_height="300dp"
         android:layout_margin="16dp"
         android:layout_gravity="center"/>
+
     <Button
         android:id="@+id/btnAdd10"
         android:layout_width="match_parent"

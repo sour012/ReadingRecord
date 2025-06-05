@@ -18,13 +18,16 @@ public class ProgressView extends View {
         super(context);
         init();
     }
+
     public ProgressView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
+
     private void init() {
         // 进度条画笔设置
         progressPaint = new Paint();
+        progressPaint.setColor(0xFF4CAF50); // 绿色进度条
         progressPaint.setStrokeWidth(20);
         progressPaint.setStyle(Paint.Style.STROKE);
         progressPaint.setAntiAlias(true);
@@ -35,6 +38,7 @@ public class ProgressView extends View {
         textPaint.setTextSize(36);
         textPaint.setAntiAlias(true);
         textPaint.setTextAlign(Paint.Align.CENTER);
+
         setContentDescription("读书进度环形图");
     }
 
@@ -56,6 +60,7 @@ public class ProgressView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        // 计算环形图区域（保留10%边距）
         float padding = getWidth() * 0.1f;
         float circleSize = getWidth() - 2 * padding;
         RectF rect = new RectF(padding, padding, padding + circleSize, padding + circleSize);
@@ -66,9 +71,11 @@ public class ProgressView extends View {
         // 计算中心坐标
         float centerX = getWidth() / 2f;
 
+        // 绘制进度百分比（仅环形中心显示）
         textPaint.setTextSize(42);
         canvas.drawText(String.format("%.0f%%", progress), centerX, rect.centerY(), textPaint);
 
+        // 绘制累计页数（环形下方）
         textPaint.setTextSize(36);
         float pageTextY = rect.bottom + dpToPx(40);
         canvas.drawText("累积页数：" + totalPages + "页", centerX, pageTextY, textPaint);

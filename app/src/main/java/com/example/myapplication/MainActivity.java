@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     private void addProgress(int minutes) {
         currentProgress += minutes;
 
+        // 每分钟阅读1页（可调整比例）
         int pagesRead = minutes;
         progressView.setTotalPages(progressView.getTotalPages() + pagesRead);
 
